@@ -7,13 +7,13 @@
                 <c:out value="${flush}"></c:out>
             </div>
         </c:if>
-        <h2>従業員　一覧</h2>
+        <h2>List of Employees</h2>
         <table id="employee_list">
             <tbody>
                 <tr>
-                    <th>社員番号</th>
-                    <th>氏名</th>
-                    <th>操作</th>
+                    <th>Employee number</th>
+                    <th>Name</th>
+                    <th>Action</th>
                 </tr>
                 <c:forEach var="employee" items="${employees}" varStatus="status">
                     <tr class="row${status.count % 2}">
@@ -47,7 +47,7 @@
                 </c:choose>
             </c:forEach>
         </div>
-        <p><a href="<c:url value='/employees/new' />">新規従業員の登録</a></p>
+        <p><a href="<c:url value='/employees/new' />">New Employee</a></p>
 
     </c:param>
 </c:import>
